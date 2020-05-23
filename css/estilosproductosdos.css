@@ -1,0 +1,528 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;400;500;600&family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+	box-sizing: border-box;
+	font-family: 'Open Sans';
+	padding: 0;
+	margin: 0;
+}
+
+hr{
+	height: 1px;
+	border: none;
+	background: #7a7a7a;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.logo{
+	font-family: 'Kodchasan';
+	font-size: 70px;
+	font-weight: 600;
+}
+
+.logo_main{
+	height: 130px;
+	padding: 0 20px 20px 20px;
+	background: white;
+	color: #d31a2b;
+	cursor: default;
+	text-align:center;
+}
+
+.logo_small{
+	display: inline-block;
+	font-size: 20px;
+	padding: 4px;
+	margin-right: 50px;
+	color: #060606;
+	cursor: pointer;
+}
+
+.nav{
+	float: left;
+	width: 100%;
+	background: #d31a2b;
+	color: white;
+	padding: 0 20px;
+	transition: .3s ease all;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	z-index: 100; 
+}
+
+.nav .wrap{
+	position: relative;
+	left: -150px;
+	transition: 0.4s ease all;
+	
+}
+
+nav{
+	display: inline-block;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+}
+
+nav a{
+	display: block;
+	padding: 15px;
+	margin: 0;
+	color: white;
+	text-decoration: none;
+	transition: 0.3s ease all;
+}
+
+nav a:hover{
+	color: #060606;
+}
+
+.main{
+	background: white;
+	padding: 80px; 60px;
+}
+
+body.nav_fixed .nav{
+	position: fixed;
+	top: 0;
+}
+
+body.nav_fixed .nav .wrap{
+	left: 0;
+}
+
+.btn-menu{
+	width: 60px;
+	height: 60px;
+	padding: 22px;
+	text-align: center;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #d31a2b;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	transition: all 500ms cubic-bezier(1, 0, 0, 1);
+	transform: translateX(100px);
+}
+
+.btn-menu:hover{
+	transform: scale(1.2);
+	background: #EF3344;
+}
+
+
+/*SUBMENU*/
+
+nav ul li .submenu{
+	position: absolute;
+	background: #EF3344;
+	width: 120%;
+	display: none;
+	z-index: 100;
+}
+
+.submeno li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open Sans';
+	text-decoration: none;
+}
+
+.nav li:hover .submenu{
+	display: block;
+}
+
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 800px){
+	.btn-menu{
+		transform: translateX(0px);
+	}
+	
+	.logo_main{
+		display: none;
+	}
+	
+	.nav{
+		width: 40%;
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		padding: 0px;
+		transform: translateX(-100%);
+	}
+	
+	.nav .wrap{
+		left: 0;
+	}
+	
+	nav{
+		width: 100%;
+		position: absolute;
+		top: 60px;
+	}
+	
+	nav li{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+	
+	.logo_small{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	
+	nav a{
+		width: 100%;
+		display: block;
+		padding: 20px;
+		margin: -10px;
+		position: relative;
+	}
+	
+	.nav-toggle{
+		transition: all 300ms cubic-bezier(1,0,0,1);
+		transform: translateX(0%);
+	}
+	
+	.submenu{
+
+	margin: 0;
+	top: 60px;
+	display: inherit;
+	padding-right: 100px;
+}
+    
+	nav ul li .submenu{
+	position: absolute;
+	background: #EF3344;
+	width: 120%;
+	display: none;
+	z-index: 100;
+	height: 55vh;
+}
+	
+}
+
+
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #333333;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(0,0%,20%,0.46), hsla(0,79%,46%,0.66)), url("../img/figuras.jpg");
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(0,0%,20%,0.46), hsla(0,79%,46%,0.66)), url("../img/figuras.jpg");
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 80px;
+    color:#fff;
+	font-family: 'Kodchasan';
+	font-weight: 500;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+	font-family: 'Kodchasan';
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* PRODUCTO */
+
+.politica{
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+.politica {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.portafolio{
+    background: #fff;
+}
+
+
+/*  Our team */
+
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+.politicas{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.columna{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.columna > img{
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+	transform: scale(0);
+	background: hsla(356,79%,46%,0.70);
+	transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+	padding-top: 5px;
+    color: #fff;
+}
+
+.columna:hover .hover-galeria{
+    transform: scale(1);
+}
+
+
+.detalles{
+    width: 24%;
+    text-align: center;
+	padding-top: 5px;
+}
+
+.detalles h4{
+    margin: 10px 0;
+	color: #222;
+	text-align: left;
+	font-size: 16px;
+}
+
+.detalles p{
+    font-weight: 300;
+    text-align: left;
+	font-size: 15px;
+	color: #222;
+}
+
+.detalles .precio{
+    font-weight: 300;
+    text-align: left;
+	font-size: 20px;
+	color: #A61825;
+}
+
+
+/* PAGINATION */
+
+.pagination li a{
+    font-weight: 300;
+    text-align: justify;
+	font-size: 17px;
+	padding: 5px;
+	color: #848484;
+}
+
+.pagination .active a{
+    font-weight: 400;
+    text-align: justify;
+	font-size: 17px;
+	padding: 5px;
+	color: #d31a2b;
+	cursor: default;
+}
+
+.numeros{
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+
+.numeros {
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.paginacion{
+    background: #fff;
+}
+
+
+
+/* footer */
+
+footer{
+    background: #222;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+	font-family: 'Kodchasan';
+	font-size: 18px;
+}
+
+.content-foo p{
+    color: #ccc;
+	font-size: 15px;
+}
+
+.titulo-final{
+    text-align: center;
+	font-size: 11px;
+	color: #C4C4C4;
+    margin: 20px 0 0 0;
+}
+
+@media screen and (max-width:500px){
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+
+
+
